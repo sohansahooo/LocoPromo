@@ -19,6 +19,7 @@ export function UserButton() {
       setUser(session?.user ?? null);
     });
 
+    
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event: string, session: any) => {
       setUser(session?.user ?? null);
     });
